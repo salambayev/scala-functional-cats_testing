@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/sattar/Desktop/Development/ScalaLang/scala-functional-cats_testing/src/main/scala/cataclysm/CatsAlfa.scala:10:25: could not find implicit value for parameter instance: cats.Functor[List][0m
+[0m[[0m[31merror[0m] [0m[0m    val result = Functor[List].fmap(List("scala", "cataclysm"))(f)[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
