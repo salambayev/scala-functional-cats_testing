@@ -42,4 +42,46 @@ class CatsAlfa {
     println(s"Apply for List with less typing: $res4")
   }
 
+  def Third(): Unit = {
+    println("Applicative ------->")
+
+    val res1 = Applicative[Option].pure(3)
+    println(s"Applicative on Option: $res1")
+
+    val res2 = Applicative[List].pure(4, 7)
+    println(s"Applicative on List: $res2")
+
+    println("Semigroup ---------->")
+
+    val res3 = 3.combine(7)
+    println(s"Semigroup on Int: $res3")
+
+    val res4 = Option(5).combine(None)
+    println(s"Semigroup on Option[Int]: $res4")
+
+    val res5 = Option(7).combine(Option(3))
+    println(s"Semigroup on Option[Int]: $res5")
+
+    val res6 = List(1, 2, 3) |+| List(3, 6, 7)
+    println(s"Symbolic operator for Semigroup |+| (Example for List): $res6")
+
+    println("Monoid ------------->")
+
+    val intAddition = new Monoid[Int]{
+      override def combine(x: Int, y: Int): Int = x + y
+
+      override def empty: Int = 0
+    }
+
+    val res7 = List(1, 2, 3).fold(intAddition.empty)(intAddition.combine)
+    println(s"Monoid intAddition for List of Ints: $res7")
+
+    val res8 = Monoid[Map[String, Int]].combineAll(List(Map("a" -> 1, "b" -> 7), Map("a" -> 3)))
+    println(s"Monoid's combineAll for Map[String, Int] : $res8")
+  }
+
+  def Fourth(): Unit = {
+    
+  }
+
 }
