@@ -4,7 +4,7 @@
 		module="scala-functional-cats_testing$sources"
 		revision="0.0.1"
 		status="integration"
-		publication="20180628010901"
+		publication="20180628100717"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
